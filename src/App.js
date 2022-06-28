@@ -1,14 +1,18 @@
 import { useState } from 'react'
+import { getRelativeLuminance, getColorContrast } from './utils'
 
 import './App.css'
 
 import ColorInput from './components/ColorInput'
 
 function App() {
-  const [colors, setColors] = useState([{ colorCode: '#ffffff' }, { colorCode: '#000000' }])
+  const [colors, setColors] = useState([
+    { colorCodeHex: '#ffffff', relativeLuminance: 1 },
+    { colorCodeHex: '#000000', relativeLuminance: 0 },
+  ])
 
   const addNewColorInput = () => {
-    setColors([...colors, { colorCode: '#' }])
+    setColors([...colors, { colorCodeHex: '#', relativeLuminance: null }])
   }
 
   const handleColorInput = (e, index) => {
@@ -16,8 +20,9 @@ function App() {
     if (!hexColor.startsWith('#')) {
       hexColor = '#' + hexColor
     }
-    setColors([...colors], (colors[index].colorCode = hexColor))
+    setColors([...colors], (colors[index].colorCodeHex = hexColor), (colors[index].relativeLuminance = getRelativeLuminance(hexColor)))
   }
+
   return (
     <div className="appContainer">
       <header>
@@ -37,7 +42,7 @@ function App() {
         </section>
         <section>
           {colors.map((obj, i) => (
-            <ColorInput key={i} inputId={i + 1} bgColor={obj.colorCode} onChange={handleColorInput} />
+            <ColorInput key={i} inputId={i + 1} bgColor={obj.colorCodeHex} onChange={handleColorInput} />
           ))}
 
           {colors.length < 12 && <button onClick={addNewColorInput}>Add color</button>}
