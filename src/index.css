@@ -1,7 +1,14 @@
+/*All CSS targeting elements directly should go here*/
+
+:root {
+  --text: #272727
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -12,4 +19,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input, textarea {
+  font-size: 1rem;
+  padding: 8px;
 }

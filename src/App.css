@@ -1,1 +1,27 @@
+/*All CSS targeting classes should go here*/
 
+.appContainer {
+  margin: 16px;
+}
+
+
+
+
+/*Color Input Component*/
+.colorInputContainer {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 20rem;
+  align-items: center;
+}
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.colorSwatch {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--text);
+  border-radius: 50%;
+}
