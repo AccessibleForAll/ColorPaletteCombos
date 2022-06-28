@@ -18,7 +18,7 @@ export const convertHexToRGB = hexCode => {
 export const getRelativeLuminance = hexColor => {
   const [R, G, B] = convertHexToRGB(hexColor)
   if (isNaN(R) || isNaN(G) || isNaN(B)) {
-    return
+    return null
   }
   const inverseRGB = [R, G, B].map(value => value / 255)
   const [r, g, b] = inverseRGB.map(value => (value <= 0.03928 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4))
@@ -29,6 +29,9 @@ export const getRelativeLuminance = hexColor => {
 }
 
 export const getColorContrast = (relativeLuminance1, relativeLuminance2) => {
+  if (relativeLuminance1 === null || relativeLuminance2 === null) {
+    return null
+  }
   const lighterColor = Math.max(relativeLuminance1, relativeLuminance2)
   const darkerColor = Math.min(relativeLuminance1, relativeLuminance2)
 

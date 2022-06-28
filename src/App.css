@@ -4,24 +4,57 @@
   margin: 16px;
 }
 
+.colorInputContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
 
 
 /*Color Input Component*/
 .colorInputContainer {
-  display: flex;
-  gap: 0.5rem;
-  max-width: 20rem;
-  align-items: center;
+  position: relative;
 }
 .inputContainer {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  
 }
 .colorSwatch {
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid var(--grey);
+  border-radius: 50%;
+  position: absolute;
+  left: 120px;
+  top: 1.75rem;
+  z-index: 1;
+}
+
+/*Contrast Info Card Component*/
+.infoCardContainer {
+  border: 1px solid var(--grey);
+  border-radius: var(--borderRadius);
+  padding: 12px;
+  display: grid;
+  max-width: 21.4rem;
+  grid-template-columns: 1.5fr 3fr 1.5fr 1fr;
+}
+
+.infoCardContainer p {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+
+
+
+.infoCardColorSwatch {
   width: 3rem;
   height: 3rem;
-  border: 1px solid var(--text);
-  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  border: 1px solid var(--grey);
+  border-radius: var(--borderRadius);
 }

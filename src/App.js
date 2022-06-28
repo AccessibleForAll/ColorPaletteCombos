@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import { getRelativeLuminance, getColorContrast } from './utils'
+import { getRelativeLuminance } from './utils'
 
 import './App.css'
 
 import ColorInput from './components/ColorInput'
+import ContrastInfoCard from './components/ContrastInfoCard'
 
 function App() {
   const [colors, setColors] = useState([
@@ -23,6 +24,7 @@ function App() {
     setColors([...colors], (colors[index].colorCodeHex = hexColor), (colors[index].relativeLuminance = getRelativeLuminance(hexColor)))
   }
 
+  console.log(colors)
   return (
     <div className="appContainer">
       <header>
@@ -40,12 +42,20 @@ function App() {
           </ul>
           <p>Large text is defined as 24px with normal font weight or 18.66px with bold font weight.</p>
         </section>
-        <section>
+        <section className="colorInputContainer">
           {colors.map((obj, i) => (
             <ColorInput key={i} inputId={i + 1} bgColor={obj.colorCodeHex} onChange={handleColorInput} />
           ))}
-
-          {colors.length < 12 && <button onClick={addNewColorInput}>Add color</button>}
+        </section>
+        {colors.length < 12 && <button onClick={addNewColorInput}>Add color</button>}
+        <section>
+          {colors.map((color1, index1) => (
+            <div key={`${color1}${index1}`}>
+              {colors.map((color2, index2) => (
+                <ContrastInfoCard key={`${index1},${index2}`} color1={color1} color2={color2} />
+              ))}
+            </div>
+          ))}
         </section>
       </main>
     </div>
