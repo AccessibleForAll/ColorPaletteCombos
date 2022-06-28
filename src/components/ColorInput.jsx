@@ -6,12 +6,12 @@ const ColorInput = props => {
     <div className="colorInputContainer">
       <div className="colorSwatch" style={{ backgroundColor: bgColor }}></div>
       <div className="inputContainer">
-        <label htmlFor="colorInput">Color {inputId}:</label>
+        <label htmlFor={`colorInput-${inputId}`}>Color {inputId}:</label>
         <input
           type="text"
           maxLength={7}
           id={`colorInput-${inputId}`}
-          name="colorInput"
+          name={`colorInput-${inputId}`}
           value={bgColor}
           onChange={e => onChange(e, inputId - 1)}
         />
