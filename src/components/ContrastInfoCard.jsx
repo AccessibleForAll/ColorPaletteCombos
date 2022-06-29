@@ -1,9 +1,13 @@
-import React from 'react'
-import { getColorContrast } from '../utils'
-import { AiOutlineStop, AiOutlineCheckCircle, AiOutlineWarning } from 'react-icons/ai'
+import React from "react";
+import { getColorContrast } from "../utils";
+import {
+  AiOutlineStop,
+  AiOutlineCheckCircle,
+  AiOutlineWarning,
+} from "react-icons/ai";
 
-const ContrastInfoCard = props => {
-  const { color1, color2 } = props
+const ContrastInfoCard = (props) => {
+  const { color1, color2 } = props;
 
   // let contrast = undefined
   // if (color1.relativeLuminance >= 0 && color2.relativeLuminance >= 0) {
@@ -11,13 +15,22 @@ const ContrastInfoCard = props => {
   //   console.log(contrast)
   // }
 
-  const contrast = getColorContrast(color1.relativeLuminance, color2.relativeLuminance)
+  const contrast = getColorContrast(
+    color1.relativeLuminance,
+    color2.relativeLuminance
+  );
 
   return (
     <>
       {contrast > 1 ? (
         <article className="infoCardContainer">
-          <div className="infoCardColorSwatch" style={{ backgroundColor: color1.colorCodeHex, color: color2.colorCodeHex }}>
+          <div
+            className="infoCardColorSwatch"
+            style={{
+              backgroundColor: color1.colorCodeHex,
+              color: color2.colorCodeHex,
+            }}
+          >
             Aa
           </div>
           <div>
@@ -67,7 +80,7 @@ const ContrastInfoCard = props => {
         </article>
       ) : null}
     </>
-  )
-}
+  );
+};
 
-export default ContrastInfoCard
+export default ContrastInfoCard;
