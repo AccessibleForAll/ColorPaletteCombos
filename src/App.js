@@ -1,34 +1,34 @@
-import { useState } from "react";
-import { getRelativeLuminance } from "./utils";
+import { useState } from "react"
+import { getRelativeLuminance } from "./utils"
 
-import "./App.css";
+import "./App.css"
 
-import ColorInput from "./components/ColorInput";
-import ContrastInfoCard from "./components/ContrastInfoCard";
+import ColorInput from "./components/ColorInput"
+import ContrastInfoCard from "./components/ContrastInfoCard"
 
 function App() {
   const [colors, setColors] = useState([
     { colorCodeHex: "#ffffff", relativeLuminance: 1 },
     { colorCodeHex: "#000000", relativeLuminance: 0 },
-  ]);
+  ])
 
   const addNewColorInput = () => {
-    setColors([...colors, { colorCodeHex: "#", relativeLuminance: null }]);
-  };
+    setColors([...colors, { colorCodeHex: "#", relativeLuminance: null }])
+  }
 
   const handleColorInput = (e, index) => {
-    let hexColor = e.target.value;
+    let hexColor = e.target.value
     if (!hexColor.startsWith("#")) {
-      hexColor = "#" + hexColor;
+      hexColor = "#" + hexColor
     }
     setColors(
       [...colors],
       (colors[index].colorCodeHex = hexColor),
       (colors[index].relativeLuminance = getRelativeLuminance(hexColor))
-    );
-  };
+    )
+  }
 
-  console.log(colors);
+  console.log(colors)
   return (
     <div className="appContainer">
       <header>
@@ -89,7 +89,7 @@ function App() {
         </section>
       </main>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

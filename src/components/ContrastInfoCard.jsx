@@ -1,13 +1,13 @@
-import React from "react";
-import { getColorContrast } from "../utils";
+import React from "react"
+import { getColorContrast } from "../utils"
 import {
   AiOutlineStop,
   AiOutlineCheckCircle,
   AiOutlineWarning,
-} from "react-icons/ai";
+} from "react-icons/ai"
 
 const ContrastInfoCard = (props) => {
-  const { color1, color2 } = props;
+  const { color1, color2 } = props
 
   // let contrast = undefined
   // if (color1.relativeLuminance >= 0 && color2.relativeLuminance >= 0) {
@@ -18,7 +18,7 @@ const ContrastInfoCard = (props) => {
   const contrast = getColorContrast(
     color1.relativeLuminance,
     color2.relativeLuminance
-  );
+  )
 
   return (
     <>
@@ -80,7 +80,7 @@ const ContrastInfoCard = (props) => {
         </article>
       ) : null}
     </>
-  );
-};
+  )
+}
 
-export default ContrastInfoCard;
+export default ContrastInfoCard

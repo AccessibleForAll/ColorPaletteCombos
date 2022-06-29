@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 
 const ColorInput = (props) => {
-  const { inputId, bgColor, onChange } = props;
+  const { inputId, bgColor, onChange } = props
   return (
     <div className="colorInputContainer">
       <div className="colorSwatch" style={{ backgroundColor: bgColor }}></div>
@@ -17,7 +17,7 @@ const ColorInput = (props) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ColorInput;
+export default ColorInput
