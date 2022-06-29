@@ -1,15 +1,38 @@
 /*All CSS targeting classes should go here*/
 
+/*App*/
 .appContainer {
   margin: 16px;
 }
 
+.instructionsContainer {
+  margin: 1.5rem 0;
+}
+
+.instructionsContainer p, .instructionsContainer ul {
+  margin-bottom: 0.5rem;
+}
+
+.wcagRequirementsList {
+  margin-left: 20px;
+}
+
 .colorInputContainer {
   display: flex;
-  justify-content: space-between;
+  gap: 0.5rem;
   flex-wrap: wrap;
 }
 
+.addColorInputBtnContainer {
+  display: flex;
+  margin: 0.5rem 0 2rem;
+}
+
+.contrastInfoCardsContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
 
 
 /*Color Input Component*/
@@ -25,23 +48,26 @@
 .colorSwatch {
   width: 2rem;
   height: 2rem;
-  border: 1px solid var(--grey);
   border-radius: 50%;
+  box-shadow: 2px 2px 5px var(--grey);
   position: absolute;
-  left: 120px;
+  left: 128px;
   top: 1.75rem;
   z-index: 1;
 }
 
 /*Contrast Info Card Component*/
 .infoCardContainer {
-  border: 1px solid var(--grey);
   border-radius: var(--borderRadius);
+  box-shadow: 2px 2px 5px var(--grey);
   padding: 12px;
   display: grid;
-  max-width: 21.4rem;
+  width: 21.4rem;
   grid-template-columns: 1.5fr 3fr 1.5fr 1fr;
+  margin-bottom: 0.5rem;
 }
+
+
 
 .infoCardContainer p {
   margin-top: 0;
@@ -55,6 +81,34 @@
   height: 3rem;
   display: grid;
   place-content: center;
-  border: 1px solid var(--grey);
   border-radius: var(--borderRadius);
+  box-shadow: 2px 2px 5px var(--grey);
+}
+
+.infoCardPassFail {
+  display: flex;
+  flex-direction: column;
+}
+.passFailText {
+  align-self: flex-end;
+}
+.icon {
+  font-size: 1.5rem;
+  align-self: flex-end;
+}
+
+
+
+/*Media queries*/
+@media (min-width: 768px ) {
+  .appContainer {
+    max-width: 700px;
+    margin: 16px auto;
+  }
+}
+
+@media (min-width: 1200px ) {
+  .appContainer {
+    max-width: 1050px;
+  }
 }

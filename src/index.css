@@ -1,9 +1,13 @@
 /*All CSS targeting elements directly should go here*/
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 :root {
   --text: #272727;
   --grey: #c7c7c7;
-  --borderRadius: 5px;
+  --primaryLt: #F5649F;
+  --borderRadius: 8px;
+
 }
 * {
   margin: 0;
@@ -13,9 +17,7 @@
 body {
   
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,7 +33,27 @@ input, textarea {
   padding: 12px;
   border: 1px solid var(--grey);
   border-radius: var(--borderRadius);
-  max-width: 10rem;
+  max-width: 10.46rem;
   box-sizing: border-box;
   
+}
+
+button {
+  padding: 0.25rem 0.5rem;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  border-radius: var(--borderRadius);
+  background-color: var(--text);
+  color: #ffffff;
+  box-shadow: 2px 2px 5px var(--grey);
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--primaryLt);
+}
+
+h1 {
+  font-size: clamp(1rem, 4vw + 1rem, 2.5rem);
 }

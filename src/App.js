@@ -31,10 +31,10 @@ function App() {
         <h1>Color Palette Combos</h1>
       </header>
       <main>
-        <section>
+        <section className="instructionsContainer">
           <p>Contrast ratio is the different in lightness between two colors.</p>
           <p>Requirements according to WCAG 2.0:</p>
-          <ul>
+          <ul className="wcagRequirementsList">
             <li>Level AA requires a ratio of 4.5:1 for normal text</li>
             <li>Level AA requires a ratio of 3:1 for large text, graphics and user interface components</li>
             <li>Level AAA requires a ratio of 7:1 for normal text</li>
@@ -47,8 +47,14 @@ function App() {
             <ColorInput key={i} inputId={i + 1} bgColor={obj.colorCodeHex} onChange={handleColorInput} />
           ))}
         </section>
-        {colors.length < 12 && <button onClick={addNewColorInput}>Add color</button>}
-        <section>
+        <div className="addColorInputBtnContainer">
+          {colors.length < 12 && (
+            <button onClick={addNewColorInput}>
+              <strong>+</strong> Add color
+            </button>
+          )}
+        </div>
+        <section className="contrastInfoCardsContainer">
           {colors.map((color1, index1) => (
             <div key={`${color1}${index1}`}>
               {colors.map((color2, index2) => (
