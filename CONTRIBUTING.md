@@ -31,12 +31,12 @@ This project is built with React and CSS.
 8.  To run the project locally:
     ````bash
     npm start```
-    The project will open on http://localhost:3000
     ````
 9.  Make your changes
 10. Stage your changes:
-    `bash git add <NameOfFileChanged> `
-    ⚠️ **Make sure** not to commit `package.json` or `package-lock.json` file
+    ```bash
+    git add <NameOfFileChanged>
+    ```
 11. Commit your changes:
     ```bash
     git commit -m "<Your commit message here>"
