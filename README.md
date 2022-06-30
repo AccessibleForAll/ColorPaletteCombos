@@ -2,6 +2,11 @@
 
 A tool for creating an accessible color palette which corresponds to the [WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html) and [WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html) criteria for color contrast
 
+## Screenshot
+
+<img width="736" alt="image" src="https://user-images.githubusercontent.com/83456083/176761271-e6971a39-a2e8-407f-b00f-78834efa9799.png">
+
+
 ## Contributing
 
 - To report a bug, please raise a [bug report](https://github.com/AccessibleForAll/ColorPaletteCombos/issues/new?assignees=&labels=&template=bug_report.md&title=)
