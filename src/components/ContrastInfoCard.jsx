@@ -6,15 +6,7 @@ import {
   AiOutlineWarning,
 } from "react-icons/ai"
 
-const ContrastInfoCard = (props) => {
-  const { color1, color2 } = props
-
-  // let contrast = undefined
-  // if (color1.relativeLuminance >= 0 && color2.relativeLuminance >= 0) {
-  //   contrast = getColorContrast(color1.relativeLuminance, color2.relativeLuminance)
-  //   console.log(contrast)
-  // }
-
+const ContrastInfoCard = ({ color1, color2 }) => {
   const contrast = getColorContrast(
     color1.relativeLuminance,
     color2.relativeLuminance
