@@ -27,8 +27,18 @@
 .addColorInputBtnContainer {
   display: flex;
   margin: 0.5rem 0 2rem;
+  column-gap: 0.5rem;
 }
-
+.addColorInputBtnContainer .addColorBtn {
+    background-color: var(--text);
+}
+.addColorInputBtnContainer .resetBtn {
+  background-color: var(--grey);
+}
+.addColorInputBtnContainer img {
+  width: 14px;
+  height: 14px;
+}
 .contrastInfoCardsContainer {
   display: flex;
   gap: 0.5rem;

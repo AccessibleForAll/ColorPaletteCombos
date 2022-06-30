@@ -42,7 +42,6 @@ button {
   font-family: inherit;
   border: none;
   border-radius: var(--borderRadius);
-  background-color: var(--text);
   color: #ffffff;
   box-shadow: 2px 2px 5px var(--grey);
   cursor: pointer;

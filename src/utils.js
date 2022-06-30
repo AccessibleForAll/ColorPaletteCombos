@@ -40,3 +40,7 @@ export const getColorContrast = (relativeLuminance1, relativeLuminance2) => {
   const contrast = (lighterColor + 0.05) / (darkerColor + 0.05)
   return contrast
 }
+
+export const deepCopyArrayOfObject =(array)=>{
+  return array.map(a => ({...a}))
+}
