@@ -39,7 +39,7 @@ function App() {
           <p>
             Contrast ratio is the different in lightness between two colors.
           </p>
-          <p>Requirements according to WCAG 2.0:</p>
+          <p>Requirements according to <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html">WCAG 2.1:</a></p>
           <ul className="wcagRequirementsList">
             <li>Level AA requires a ratio of 4.5:1 for normal text</li>
             <li>
