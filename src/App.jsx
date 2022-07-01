@@ -78,7 +78,7 @@ function App() {
             </button>
           )}
           <button className="resetBtn" onClick={resetTextfields}>
-            <AiOutlineReload/>
+            <AiOutlineReload className="resetIcon"/>
             Reset
           </button>
         </div>

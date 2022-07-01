@@ -31,6 +31,7 @@
 }
 .addColorInputBtnContainer .addColorBtn {
     background-color: var(--text);
+    color: #ffffff;
 }
 .addColorInputBtnContainer .resetBtn {
   background-color: var(--grey);
@@ -38,6 +39,9 @@
   display: flex;
   align-items: center;
   gap: 5px;
+}
+.resetIcon{
+  stroke-width:15px;
 }
 .contrastInfoCardsContainer {
   display: flex;
