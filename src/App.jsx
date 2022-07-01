@@ -1,16 +1,18 @@
 import { useState } from "react"
-import { getRelativeLuminance } from "./utils"
+import { getRelativeLuminance,deepCopyArrayOfObject } from "./utils"
 
 import "./App.css"
 
+import {AiOutlineReload} from "react-icons/ai"
 import ColorInput from "./components/ColorInput"
 import ContrastInfoCard from "./components/ContrastInfoCard"
 
+const initialColorState = [
+  { colorCodeHex: "#ffffff", relativeLuminance: 1 },
+  { colorCodeHex: "#000000", relativeLuminance: 0 },
+]
 function App() {
-  const [colors, setColors] = useState([
-    { colorCodeHex: "#ffffff", relativeLuminance: 1 },
-    { colorCodeHex: "#000000", relativeLuminance: 0 },
-  ])
+  const [colors, setColors] = useState(deepCopyArrayOfObject(initialColorState))
 
   const addNewColorInput = () => {
     setColors([...colors, { colorCodeHex: "#", relativeLuminance: null }])
@@ -27,7 +29,9 @@ function App() {
       (colors[index].relativeLuminance = getRelativeLuminance(hexColor))
     )
   }
-
+  const resetTextfields = () =>{
+    setColors(deepCopyArrayOfObject(initialColorState))
+  }
   console.log(colors)
   return (
     <div className="appContainer">
@@ -69,10 +73,14 @@ function App() {
         </section>
         <div className="addColorInputBtnContainer">
           {colors.length < 12 && (
-            <button onClick={addNewColorInput}>
+            <button className="addColorBtn" onClick={addNewColorInput}>
               <strong>+</strong> Add color
             </button>
           )}
+          <button className="resetBtn" onClick={resetTextfields}>
+            <AiOutlineReload className="resetIcon"/>
+            Reset
+          </button>
         </div>
         <section className="contrastInfoCardsContainer">
           {colors.map((color1, index1) => (
