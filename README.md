@@ -4,7 +4,7 @@ A tool for creating an accessible color palette which corresponds to the [WCAG 2
 
 ## Screenshot
 
-<img width="736" alt="image" src="https://user-images.githubusercontent.com/83456083/176761271-e6971a39-a2e8-407f-b00f-78834efa9799.png">
+<img width="736" alt="Screenshot of website showing 3 color inputs and the possible color combinations" src="https://user-images.githubusercontent.com/83456083/176761271-e6971a39-a2e8-407f-b00f-78834efa9799.png">
 
 
 ## Contributing
