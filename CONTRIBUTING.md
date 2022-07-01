@@ -30,7 +30,7 @@ This project is built with React and CSS.
     ```
 8.  To run the project locally:
     ````bash
-    npm start```
+    npm start
     ````
 9.  Make your changes
 10. Stage your changes:
