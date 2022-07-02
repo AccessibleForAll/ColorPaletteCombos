@@ -71,9 +71,15 @@
 /* Delete button */
 .deleteButton{
   position: absolute;
-  top: .75rem;
+  top: 0.75rem;
   left: 160px;
-  cursor: pointer;
+  background: white;
+  border-radius: 8px;
+  height: 1rem;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;  
 }
 /*Contrast Info Card Component*/
 .infoCardContainer {

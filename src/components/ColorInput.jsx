@@ -5,7 +5,7 @@ const ColorInput = ({ inputId,colorsLength, bgColor, onChange,handleDelete }) =>
   return (
     <div className="colorInputContainer">
       <div className="colorSwatch" style={{ backgroundColor: bgColor }}></div>
-      {(colorsLength > 2)?<AiOutlineCloseCircle color="red" className="deleteButton" onClick={()=>handleDelete(inputId-1)}/>:null}
+      {(colorsLength > 2)?<button className="deleteButton"><AiOutlineCloseCircle color="grey"  onClick={()=>handleDelete(inputId-1)}/></button>:null}
       <div className="inputContainer">
         <label htmlFor={`colorInput-${inputId}`}>Color {inputId}:</label>
         <input
