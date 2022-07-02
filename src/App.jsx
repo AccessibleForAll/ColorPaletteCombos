@@ -73,6 +73,7 @@ function App() {
               bgColor={obj.colorCodeHex}
               onChange={handleColorInput}
               handleDelete={handleDelete}
+              colorsLength={colors.length}
             />
           ))}
         </section>
