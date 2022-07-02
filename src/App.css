@@ -74,7 +74,7 @@
   top: 0.75rem;
   left: 160px;
   background: white;
-  border-radius: 8px;
+  border-radius: var(--borderRadius);
   height: 1rem;
   padding: 0;
   box-shadow: none;
