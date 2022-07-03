@@ -30,18 +30,18 @@
   column-gap: 0.5rem;
 }
 .addColorInputBtnContainer .addColorBtn {
-    background-color: var(--text);
-    color: #ffffff;
+  background-color: var(--text);
+  color: #ffffff;
 }
 .addColorInputBtnContainer .resetBtn {
   background-color: var(--grey);
-  color:#000;
+  color: #000;
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.resetIcon{
-  stroke-width:15px;
+.resetIcon {
+  stroke-width: 15px;
 }
 .contrastInfoCardsContainer {
   display: flex;
@@ -69,17 +69,17 @@
   z-index: 1;
 }
 /* Delete button */
-.deleteButton{
+.deleteButton {
   position: absolute;
-  top: 0.75rem;
-  left: 160px;
+  top: 0.95rem;
+  left: 158px;
   background: white;
   border-radius: var(--borderRadius);
   height: 1rem;
   padding: 0;
   box-shadow: none;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 /*Contrast Info Card Component*/
 .infoCardContainer {
