@@ -21,7 +21,7 @@ const Footer = () => {
       <div className="footer-div">
         <p>Having issues?</p>
         <a
-          href="https://github.com/AccessibleForAll/ColorPaletteCombos/issues/new/choose"
+          href="https://github.com/AccessibleForAll/ColorPaletteCombos/issues/new?assignees=&labels=&template=bug_report.md&title="
           className="new-issue-link"
         >
           Report a bug
