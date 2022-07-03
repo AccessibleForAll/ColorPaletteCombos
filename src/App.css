@@ -68,7 +68,19 @@
   top: 1.75rem;
   z-index: 1;
 }
-
+/* Delete button */
+.deleteButton{
+  position: absolute;
+  top: 0.75rem;
+  left: 160px;
+  background: white;
+  border-radius: var(--borderRadius);
+  height: 1rem;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;  
+}
 /*Contrast Info Card Component*/
 .infoCardContainer {
   border-radius: var(--borderRadius);

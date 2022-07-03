@@ -32,6 +32,10 @@ function App() {
   const resetTextfields = () =>{
     setColors(deepCopyArrayOfObject(initialColorState))
   }
+  const handleDelete = (index) =>{
+    colors.splice(index,1)
+    setColors([...colors])
+  }
   console.log(colors)
   return (
     <div className="appContainer">
@@ -68,6 +72,8 @@ function App() {
               inputId={i + 1}
               bgColor={obj.colorCodeHex}
               onChange={handleColorInput}
+              handleDelete={handleDelete}
+              colorsLength={colors.length}
             />
           ))}
         </section>
