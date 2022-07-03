@@ -6,12 +6,12 @@
 }
 
 .instructionsContainer {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .instructionsContainer p,
 .instructionsContainer ul {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .wcagRequirementsList {
@@ -40,9 +40,11 @@
   align-items: center;
   gap: 5px;
 }
+
 .resetIcon {
   stroke-width: 15px;
 }
+
 .contrastInfoCardsContainer {
   display: flex;
   gap: 0.5rem;
