@@ -2,7 +2,7 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="footer">
       <div className="footer-div" id="github-link-container">
         <a
           href="https://github.com/AccessibleForAll/ColorPaletteCombos"

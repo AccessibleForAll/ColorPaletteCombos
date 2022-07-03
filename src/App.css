@@ -30,18 +30,18 @@
   column-gap: 0.5rem;
 }
 .addColorInputBtnContainer .addColorBtn {
-    background-color: var(--text);
-    color: #ffffff;
+  background-color: var(--text);
+  color: #ffffff;
 }
 .addColorInputBtnContainer .resetBtn {
   background-color: var(--grey);
-  color:#000;
+  color: #000;
   display: flex;
   align-items: center;
   gap: 5px;
 }
-.resetIcon{
-  stroke-width:15px;
+.resetIcon {
+  stroke-width: 15px;
 }
 .contrastInfoCardsContainer {
   display: flex;
@@ -107,7 +107,7 @@
 }
 
 /* Footer Component */
-footer {
+.footer {
   margin-top: 3rem;
   padding: 1rem 0;
   display: flex;
