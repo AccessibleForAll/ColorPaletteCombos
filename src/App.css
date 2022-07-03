@@ -3,6 +3,8 @@
 /*App*/
 .appContainer {
   margin: 16px;
+  display: flex;
+  flex-direction: column;
 }
 
 .instructionsContainer {
@@ -108,8 +110,8 @@
 
 /* Footer Component */
 .footer {
-  margin-top: 3rem;
-  padding: 1rem 0;
+  margin-top: auto;
+  padding: 5rem 0 1rem 0;
   display: flex;
   justify-content: space-between;
   font-family: inherit;
