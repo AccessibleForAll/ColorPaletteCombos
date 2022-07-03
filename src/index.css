@@ -21,9 +21,8 @@ body {
 }
 
 #root {
-  position: relative;
   min-height: 100vh;
-  max-height: fit-content;
+  height: fit-content;
   display: flex;
 }
 
