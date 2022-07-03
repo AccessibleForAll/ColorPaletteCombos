@@ -6,12 +6,12 @@
 }
 
 .instructionsContainer {
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .instructionsContainer p,
 .instructionsContainer ul {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .wcagRequirementsList {
@@ -27,6 +27,22 @@
 .addColorInputBtnContainer {
   display: flex;
   margin: 0.5rem 0 2rem;
+  column-gap: 0.5rem;
+}
+.addColorInputBtnContainer .addColorBtn {
+  background-color: var(--text);
+  color: #ffffff;
+}
+.addColorInputBtnContainer .resetBtn {
+  background-color: var(--grey);
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.resetIcon {
+  stroke-width: 15px;
 }
 
 .contrastInfoCardsContainer {
@@ -54,7 +70,19 @@
   top: 1.75rem;
   z-index: 1;
 }
-
+/* Delete button */
+.deleteButton {
+  position: absolute;
+  top: 0.95rem;
+  left: 158px;
+  background: white;
+  border-radius: var(--borderRadius);
+  height: 1rem;
+  padding: 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+}
 /*Contrast Info Card Component*/
 .infoCardContainer {
   border-radius: var(--borderRadius);

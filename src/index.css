@@ -42,8 +42,6 @@ button {
   font-family: inherit;
   border: none;
   border-radius: var(--borderRadius);
-  background-color: var(--text);
-  color: #ffffff;
   box-shadow: 2px 2px 5px var(--grey);
   cursor: pointer;
 }
@@ -54,4 +52,8 @@ button:focus-visible {
 
 h1 {
   font-size: clamp(1rem, 4vw + 1rem, 2.5rem);
+}
+
+p {
+  line-height: 1.6;
 }
