@@ -1,9 +1,9 @@
 import { useState } from "react"
-import { getRelativeLuminance,deepCopyArrayOfObject } from "./utils"
+import { getRelativeLuminance, deepCopyArrayOfObject } from "./utils"
 
 import "./App.css"
 
-import {AiOutlineReload} from "react-icons/ai"
+import { AiOutlineReload } from "react-icons/ai"
 import ColorInput from "./components/ColorInput"
 import ContrastInfoCard from "./components/ContrastInfoCard"
 import Footer from "./components/Footer"
@@ -30,7 +30,7 @@ function App() {
       (colors[index].relativeLuminance = getRelativeLuminance(hexColor))
     )
   }
-  const resetTextfields = () =>{
+  const resetTextfields = () => {
     setColors(deepCopyArrayOfObject(initialColorState))
   }
   console.log(colors)
@@ -88,7 +88,7 @@ function App() {
             </button>
           )}
           <button className="resetBtn" onClick={resetTextfields}>
-            <AiOutlineReload className="resetIcon"/>
+            <AiOutlineReload className="resetIcon" />
             Reset
           </button>
         </div>
