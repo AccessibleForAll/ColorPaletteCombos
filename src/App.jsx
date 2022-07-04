@@ -33,6 +33,10 @@ function App() {
   const resetTextfields = () => {
     setColors(deepCopyArrayOfObject(initialColorState))
   }
+  const handleDelete = (index) => {
+    colors.splice(index, 1)
+    setColors([...colors])
+  }
   console.log(colors)
   return (
     <div className="appContainer">
@@ -42,10 +46,21 @@ function App() {
       <main>
         <section className="instructionsContainer">
           <p>
-            Contrast ratio is the different in lightness between two colors.
+            This contrast checker lets you compare up to 12 colors at once to
+            help you plan an accessible design. It will show all possible
+            combinations of background and foreground colors and whether they
+            pass or fail the current requirements.
           </p>
-          {/* prettier-ignore */}
-          <p>Requirements according to <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">WCAG 2.0</a> and <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html">WCAG 2.1:</a></p>
+          <p>
+            Requirements according to{" "}
+            <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">
+              WCAG 2.0
+            </a>{" "}
+            and{" "}
+            <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced.html">
+              WCAG 2.1:
+            </a>
+          </p>
           <ul className="wcagRequirementsList">
             <li>Level AA requires a ratio of 4.5:1 for normal text</li>
             <li>
@@ -70,6 +85,8 @@ function App() {
               inputId={i + 1}
               bgColor={obj.colorCodeHex}
               onChange={handleColorInput}
+              handleDelete={handleDelete}
+              colorsLength={colors.length}
             />
           ))}
         </section>
