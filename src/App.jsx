@@ -38,6 +38,12 @@ function App() {
 		setColors([...colors])
 	}
 
+	const colorCombinations = colors
+		.map((color1) => {
+			return colors.map((color2) => ({ color1, color2 }))
+		})
+		.flat()
+
 	return (
 		<div className="appContainer">
 			<header>
@@ -101,18 +107,16 @@ function App() {
 						Reset
 					</button>
 				</div>
-				<section className="contrastInfoCardsContainer">
-					{colors.map((color1, index1) => (
-						<div key={`${color1}${index1}`}>
-							{colors.map((color2, index2) => (
-								<ContrastInfoCard
-									key={`${index1},${index2}`}
-									color1={color1}
-									color2={color2}
-								/>
-							))}
-						</div>
-					))}
+				<section>
+					<ul className="contrastInfoCardsContainer">
+						{colorCombinations.map((colorObj, index) => (
+							<ContrastInfoCard
+								key={`${index}`}
+								color1={colorObj.color1}
+								color2={colorObj.color2}
+							/>
+						))}
+					</ul>
 				</section>
 			</main>
 			<Footer />
