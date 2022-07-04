@@ -145,13 +145,13 @@
 /*Media queries*/
 @media (min-width: 768px) {
   .appContainer {
-    max-width: 700px;
+    width: 700px;
     margin: 16px auto;
   }
 }
 
 @media (min-width: 1200px) {
   .appContainer {
-    max-width: 1050px;
+    width: 1050px;
   }
 }
