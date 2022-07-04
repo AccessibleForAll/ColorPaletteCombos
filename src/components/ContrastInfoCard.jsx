@@ -15,7 +15,7 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 	return (
 		<>
 			{contrast > 1 ? (
-				<article className="infoCardContainer">
+				<li className="infoCardContainer">
 					<div
 						className="infoCardColorSwatch"
 						aria-hidden="true"
@@ -33,7 +33,7 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 						<p className="colorRatio">
 							<strong>
 								{Math.round(contrast * 100) / 100}
-								<span aria-label="to"></span>:1
+								<span className="sr-only">to</span>:1
 							</strong>
 						</p>
 						{contrast >= 7 && (
@@ -72,7 +72,7 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 							</div>
 						)}
 					</div>
-				</article>
+				</li>
 			) : null}
 		</>
 	)
