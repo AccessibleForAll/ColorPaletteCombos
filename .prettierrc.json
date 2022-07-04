@@ -1,8 +1,11 @@
 {
   "trailingComma": "es5",
+  "useTabs": true,
   "tabWidth": 2,
   "semi": false,
   "singleQuote": false,
   "bracketSpacing": true,
-  "endOfLine": "lf"
+  "bracketSameLine": true,
+  "endOfLine": "lf",
+  "singleAttributePerLine": false
 }
