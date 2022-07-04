@@ -2,156 +2,156 @@
 
 /*App*/
 .appContainer {
-  margin: 16px;
-  display: flex;
-  flex-direction: column;
+	margin: 16px;
+	display: flex;
+	flex-direction: column;
 }
 
 .instructionsContainer {
-  margin: 2rem 0;
+	margin: 2rem 0;
 }
 
 .instructionsContainer p,
 .instructionsContainer ul {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 .wcagRequirementsList {
-  margin-left: 20px;
+	margin-left: 20px;
 }
 
 .colorInputContainer {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
 }
 
 .addColorInputBtnContainer {
-  display: flex;
-  margin: 0.5rem 0 2rem;
-  column-gap: 0.5rem;
+	display: flex;
+	margin: 0.5rem 0 2rem;
+	column-gap: 0.5rem;
 }
 .addColorInputBtnContainer .addColorBtn {
-  background-color: var(--text);
-  color: #ffffff;
+	background-color: var(--text);
+	color: #ffffff;
 }
 .addColorInputBtnContainer .resetBtn {
-  background-color: var(--grey);
-  color: #000;
-  display: flex;
-  align-items: center;
-  gap: 5px;
+	background-color: var(--grey);
+	color: #000;
+	display: flex;
+	align-items: center;
+	gap: 5px;
 }
 .resetIcon {
-  stroke-width: 15px;
+	stroke-width: 15px;
 }
 
 .contrastInfoCardsContainer {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
+	display: flex;
+	gap: 0.5rem;
+	flex-wrap: wrap;
 }
 
 /*Color Input Component*/
 .colorInputContainer {
-  position: relative;
+	position: relative;
 }
 .inputContainer {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 }
 .colorSwatch {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px var(--grey);
-  position: absolute;
-  left: 128px;
-  top: 1.75rem;
-  z-index: 1;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px var(--grey);
+	position: absolute;
+	left: 128px;
+	top: 1.75rem;
+	z-index: 1;
 }
 /* Delete button */
 .deleteButton {
-  position: absolute;
-  top: 0.95rem;
-  left: 158px;
-  background: white;
-  border-radius: var(--borderRadius);
-  height: 1rem;
-  padding: 0;
-  box-shadow: none;
-  display: flex;
-  align-items: center;
+	position: absolute;
+	top: 0.95rem;
+	left: 158px;
+	background: white;
+	border-radius: var(--borderRadius);
+	height: 1rem;
+	padding: 0;
+	box-shadow: none;
+	display: flex;
+	align-items: center;
 }
 /*Contrast Info Card Component*/
 .infoCardContainer {
-  border-radius: var(--borderRadius);
-  box-shadow: 2px 2px 5px var(--grey);
-  padding: 12px;
-  display: grid;
-  width: 21.4rem;
-  grid-template-columns: 1.5fr 3fr 1.5fr 1fr;
-  margin-bottom: 0.5rem;
+	border-radius: var(--borderRadius);
+	box-shadow: 2px 2px 5px var(--grey);
+	padding: 12px;
+	display: grid;
+	width: 21.4rem;
+	grid-template-columns: 1.5fr 3fr 1.5fr 1fr;
+	margin-bottom: 0.5rem;
 }
 
 .infoCardContainer p {
-  margin-top: 0;
-  margin-bottom: 0.2rem;
+	margin-top: 0;
+	margin-bottom: 0.2rem;
 }
 
 .infoCardColorSwatch {
-  width: 3rem;
-  height: 3rem;
-  display: grid;
-  place-content: center;
-  border-radius: var(--borderRadius);
-  box-shadow: 2px 2px 5px var(--grey);
+	width: 3rem;
+	height: 3rem;
+	display: grid;
+	place-content: center;
+	border-radius: var(--borderRadius);
+	box-shadow: 2px 2px 5px var(--grey);
 }
 
 .infoCardPassFail {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 .passFailText {
-  align-self: flex-end;
+	align-self: flex-end;
 }
 .icon {
-  font-size: 1.5rem;
-  align-self: flex-end;
+	font-size: 1.5rem;
+	align-self: flex-end;
 }
 
 /* Footer Component */
 .footer {
-  margin-top: auto;
-  padding: 5rem 0 1rem 0;
-  display: flex;
-  justify-content: space-between;
-  font-family: inherit;
+	margin-top: auto;
+	padding: 5rem 0 1rem 0;
+	display: flex;
+	justify-content: space-between;
+	font-family: inherit;
 }
 
 .footer-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
 }
 
 .footer-div svg {
-  width: 1.2rem;
-  height: auto;
+	width: 1.2rem;
+	height: auto;
 }
 
 /*Media queries*/
 @media (min-width: 768px) {
-  .appContainer {
-    width: 700px;
-    margin: 16px auto;
-  }
+	.appContainer {
+		width: 700px;
+		margin: 16px auto;
+	}
 }
 
 @media (min-width: 1200px) {
-  .appContainer {
-    width: 1050px;
-  }
+	.appContainer {
+		width: 1050px;
+	}
 }

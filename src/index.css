@@ -3,63 +3,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
 :root {
-  --text: #272727;
-  --grey: #c7c7c7;
-  --primaryLt: #f5649f;
-  --borderRadius: 8px;
+	--text: #272727;
+	--grey: #c7c7c7;
+	--primaryLt: #f5649f;
+	--borderRadius: 8px;
 }
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-  color: var(--text);
-  font-family: "Noto Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	color: var(--text);
+	font-family: "Noto Sans", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 #root {
-  min-height: 100vh;
-  height: fit-content;
-  display: flex;
+	min-height: 100vh;
+	height: fit-content;
+	display: flex;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
 }
 
 input,
 textarea {
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 12px;
-  border: 1px solid var(--grey);
-  border-radius: var(--borderRadius);
-  max-width: 10.46rem;
-  box-sizing: border-box;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 12px;
+	border: 1px solid var(--grey);
+	border-radius: var(--borderRadius);
+	max-width: 10.46rem;
+	box-sizing: border-box;
 }
 
 button {
-  padding: 0.25rem 0.5rem;
-  font-size: inherit;
-  font-family: inherit;
-  border: none;
-  border-radius: var(--borderRadius);
-  box-shadow: 2px 2px 5px var(--grey);
-  cursor: pointer;
+	padding: 0.25rem 0.5rem;
+	font-size: inherit;
+	font-family: inherit;
+	border: none;
+	border-radius: var(--borderRadius);
+	box-shadow: 2px 2px 5px var(--grey);
+	cursor: pointer;
 }
 
 button:focus-visible {
-  outline: 3px solid var(--primaryLt);
+	outline: 3px solid var(--primaryLt);
 }
 
 h1 {
-  font-size: clamp(1rem, 4vw + 1rem, 2.5rem);
+	font-size: clamp(1rem, 4vw + 1rem, 2.5rem);
 }
 
 p {
-  line-height: 1.6;
+	line-height: 1.6;
 }
