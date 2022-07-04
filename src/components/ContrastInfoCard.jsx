@@ -18,6 +18,7 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 				<article className="infoCardContainer">
 					<div
 						className="infoCardColorSwatch"
+						aria-hidden="true"
 						style={{
 							backgroundColor: color1.colorCodeHex,
 							color: color2.colorCodeHex,
@@ -25,26 +26,26 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 						Aa
 					</div>
 					<div>
-						<p>Color: {color1.colorCodeHex}</p>
-						<p>Color: {color2.colorCodeHex}</p>
+						<p>Background: {color1.colorCodeHex}</p>
+						<p>Foreground: {color2.colorCodeHex}</p>
 					</div>
 					<div>
-						<p>
+						<p className="colorRatio">
 							<strong>{Math.round(contrast * 100) / 100}:1</strong>
 						</p>
 						{contrast >= 7 && (
 							<div>
-								<p>AAA</p>
+								<p className="colorRatio">AAA</p>
 							</div>
 						)}
 						{contrast >= 4.5 && contrast < 7 && (
 							<div>
-								<p>AA</p>
+								<p className="colorRatio">AA</p>
 							</div>
 						)}
 						{contrast >= 3 && contrast < 4.5 && (
 							<div>
-								<p>AA large</p>
+								<p className="colorRatio">AA large</p>
 							</div>
 						)}
 					</div>

@@ -7,9 +7,16 @@ const ColorInput = ({
 	onChange,
 	handleDelete,
 }) => {
+	let background = false
+	if (bgColor.length === 4 || bgColor.length === 7) {
+		background = true
+	}
+
 	return (
 		<div className="colorInputContainer">
-			<div className="colorSwatch" style={{ backgroundColor: bgColor }}></div>
+			<div
+				className="colorSwatch"
+				style={{ backgroundColor: background ? bgColor : null }}></div>
 			<div className="inputContainer">
 				<label htmlFor={`colorInput-${inputId}`}>Color {inputId}:</label>
 				<input
@@ -23,7 +30,7 @@ const ColorInput = ({
 				{colorsLength > 2 ? (
 					<button
 						className="deleteButton"
-						aria-label="delete input"
+						aria-label={`delete input ${inputId}`}
 						onClick={() => handleDelete(inputId - 1)}>
 						<AiOutlineCloseCircle color="grey" />
 					</button>

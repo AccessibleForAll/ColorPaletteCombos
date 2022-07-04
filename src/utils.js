@@ -7,7 +7,9 @@ export const convertHexToRGB = (hexCode) => {
 		R = parseInt(hexCode[1] + hexCode[1], 16)
 		G = parseInt(hexCode[2] + hexCode[2], 16)
 		B = parseInt(hexCode[3] + hexCode[3], 16)
-	} else {
+	}
+
+	if (hexCode.length === 7) {
 		R = parseInt(hexCode.slice(1, 3), 16)
 		G = parseInt(hexCode.slice(3, 5), 16)
 		B = parseInt(hexCode.slice(5, 7), 16)

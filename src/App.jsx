@@ -37,7 +37,7 @@ function App() {
 		colors.splice(index, 1)
 		setColors([...colors])
 	}
-	console.log(colors)
+
 	return (
 		<div className="appContainer">
 			<header>
