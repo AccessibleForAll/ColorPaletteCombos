@@ -76,27 +76,6 @@
   width: 1px;
 }
 
-/* Footer Component */
-.footer {
-	margin-top: auto;
-	padding: 5rem 0 1rem 0;
-	display: flex;
-	justify-content: space-between;
-	font-family: inherit;
-}
-
-.footer-div {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 0.5rem;
-}
-
-.footer-div svg {
-	width: 1.2rem;
-	height: auto;
-}
-
 /*Media queries*/
 @media (min-width: 768px) {
 	.appContainer {
