@@ -5,7 +5,7 @@ import "./App.css"
 
 import { AiOutlineReload } from "react-icons/ai"
 import ColorInput from "./components/ColorInput/ColorInput"
-import ContrastInfoCard from "./components/ContrastInfoCard"
+import ContrastInfoCard from "./components/ContrastInfoCard/ContrastInfoCard"
 import Footer from "./components/Footer"
 
 const initialColorState = [

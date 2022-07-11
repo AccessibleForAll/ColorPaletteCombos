@@ -75,44 +75,6 @@
   white-space: nowrap; 
   width: 1px;
 }
-/*Contrast Info Card Component*/
-.infoCardContainer {
-	border-radius: var(--borderRadius);
-	box-shadow: 2px 2px 5px var(--grey);
-	padding: 12px 8px;
-	display: grid;
-	width: 21.4rem;
-	grid-template-columns: 1fr auto 1.25fr 0.8fr;
-  gap: 5px;
-}
-
-.infoCardContainer p + .infoCardContainer p {
-	margin-top: 0;
-	margin-bottom: 0.2rem;
-}
-
-.infoCardColorSwatch {
-	width: 3rem;
-	height: 3rem;
-	display: grid;
-	place-content: center;
-	border-radius: var(--borderRadius);
-	box-shadow: 2px 2px 5px var(--grey);
-}
-.colorRatio {
-  text-align: end;
-}
-.infoCardPassFail {
-	display: flex;
-	flex-direction: column;
-}
-.passFailText {
-	align-self: flex-end;
-}
-.icon {
-	font-size: 1.5rem;
-	align-self: flex-end;
-}
 
 /* Footer Component */
 .footer {
