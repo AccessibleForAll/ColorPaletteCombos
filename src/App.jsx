@@ -6,6 +6,7 @@ import "./App.css"
 import { AiOutlineReload } from "react-icons/ai"
 import ColorInput from "./components/ColorInput"
 import ContrastInfoCard from "./components/ContrastInfoCard"
+import Header from "./components/Header/Header"
 import Footer from "./components/Footer"
 
 const initialColorState = [
@@ -46,10 +47,8 @@ function App() {
 
 	return (
 		<div className="appContainer">
-			<header>
-				<h1>Color Palette Combos</h1>
-			</header>
-			<main>
+			<Header />
+			<main className="main">
 				<section className="instructionsContainer">
 					<p>
 						This contrast checker lets you compare up to 12 colors at once to
