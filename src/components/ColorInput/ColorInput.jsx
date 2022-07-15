@@ -1,5 +1,8 @@
 import React from "react"
 import { AiOutlineCloseCircle } from "react-icons/ai"
+
+import styles from "./ColorInput.module.css"
+
 const ColorInput = ({
 	inputId,
 	colorsLength,
@@ -13,11 +16,11 @@ const ColorInput = ({
 	}
 
 	return (
-		<div className="colorInputContainer">
+		<div className={styles.colorInputContainer}>
 			<div
-				className="colorSwatch"
+				className={styles.colorSwatch}
 				style={{ backgroundColor: background ? bgColor : null }}></div>
-			<div className="inputContainer">
+			<div className={styles.inputContainer}>
 				<label htmlFor={`colorInput-${inputId}`}>Color {inputId}:</label>
 				<input
 					type="text"
