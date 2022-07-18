@@ -1,0 +1,33 @@
+/*Color Input Component*/
+.colorInputContainer {
+	position: relative;	
+}
+.inputContainer {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+.colorSwatch {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	box-shadow: 2px 2px 5px var(--grey);
+	position: absolute;
+	left: 128px;
+	top: 1.75rem;
+	z-index: 1;
+}
+
+/* Delete button */
+.deleteButton {
+	position: absolute;
+	top: 0.95rem;
+	left: 158px;
+	background: white;
+	border-radius: var(--borderRadius);
+	height: 1rem;
+	padding: 0;
+	box-shadow: none;
+	display: flex;
+	align-items: center;
+}

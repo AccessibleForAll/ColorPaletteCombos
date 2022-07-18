@@ -1,10 +1,12 @@
 import React from "react"
-import { getColorContrast } from "../utils"
+import { getColorContrast } from "../../utils"
 import {
 	AiOutlineStop,
 	AiOutlineCheckCircle,
 	AiOutlineWarning,
 } from "react-icons/ai"
+
+import styles from "./ContrastInfoCard.module.css"
 
 const ContrastInfoCard = ({ color1, color2 }) => {
 	const contrast = getColorContrast(
@@ -15,9 +17,9 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 	return (
 		<>
 			{contrast > 1 ? (
-				<li className="infoCardContainer">
+				<li className={styles.infoCardContainer}>
 					<div
-						className="infoCardColorSwatch"
+						className={styles.infoCardColorSwatch}
 						aria-hidden="true"
 						style={{
 							backgroundColor: color1.colorCodeHex,
@@ -30,7 +32,7 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 						<p>Foreground: {color2.colorCodeHex}</p>
 					</div>
 					<div>
-						<p className="colorRatio">
+						<p className={styles.colorRatio}>
 							<strong>
 								{Math.round(contrast * 100) / 100}
 								<span className="sr-only">to</span>:1
@@ -38,37 +40,37 @@ const ContrastInfoCard = ({ color1, color2 }) => {
 						</p>
 						{contrast >= 7 && (
 							<div>
-								<p className="colorRatio">AAA</p>
+								<p className={styles.colorRatio}>AAA</p>
 							</div>
 						)}
 						{contrast >= 4.5 && contrast < 7 && (
 							<div>
-								<p className="colorRatio">AA</p>
+								<p className={styles.colorRatio}>AA</p>
 							</div>
 						)}
 						{contrast >= 3 && contrast < 4.5 && (
 							<div>
-								<p className="colorRatio">AA large</p>
+								<p className={styles.colorRatio}>AA large</p>
 							</div>
 						)}
 					</div>
 					<div>
 						{contrast >= 4.5 && (
-							<div className="infoCardPassFail">
-								<p className="passFailText">PASS</p>
-								<AiOutlineCheckCircle className="icon" color="green" />
+							<div className={styles.infoCardPassFail}>
+								<p className={styles.passFailText}>PASS</p>
+								<AiOutlineCheckCircle className={styles.icon} color="green" />
 							</div>
 						)}
 						{contrast >= 3 && contrast < 4.5 && (
-							<div className="infoCardPassFail">
-								<p className="passFailText">PASS</p>
-								<AiOutlineWarning className="icon" color="#D46513" />
+							<div className={styles.infoCardPassFail}>
+								<p className={styles.passFailText}>PASS</p>
+								<AiOutlineWarning className={styles.icon} color="#D46513" />
 							</div>
 						)}
 						{contrast < 3 && (
-							<div className="infoCardPassFail">
-								<p className="passFailText">FAIL</p>
-								<AiOutlineStop className="icon" color="red" />
+							<div className={styles.infoCardPassFail}>
+								<p className={styles.passFailText}>FAIL</p>
+								<AiOutlineStop className={styles.icon} color="red" />
 							</div>
 						)}
 					</div>

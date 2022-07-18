@@ -4,9 +4,10 @@ import { getRelativeLuminance, deepCopyArrayOfObject } from "./utils"
 import "./App.css"
 
 import { AiOutlineReload } from "react-icons/ai"
-import ColorInput from "./components/ColorInput"
-import ContrastInfoCard from "./components/ContrastInfoCard"
-import Footer from "./components/Footer"
+import ColorInput from "./components/ColorInput/ColorInput"
+import ContrastInfoCard from "./components/ContrastInfoCard/ContrastInfoCard"
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
 
 const initialColorState = [
 	{ colorCodeHex: "#ffffff", relativeLuminance: 1 },
@@ -46,16 +47,17 @@ function App() {
 
 	return (
 		<div className="appContainer">
-			<header>
-				<h1>Color Palette Combos</h1>
-			</header>
-			<main>
+			<Header />
+			<main className="main">
 				<section className="instructionsContainer">
 					<p>
-						This contrast checker lets you compare up to 12 colors at once to
-						help you plan an accessible design. It will show all possible
-						combinations of background and foreground colors and whether they
-						pass or fail the current requirements.
+						This contrast checker lets you compare up to 12 colors (hex codes)
+						at once to help you plan an accessible design.
+					</p>
+
+					<p>
+						It will show all possible combinations of background and foreground
+						colors and whether they pass or fail the current requirements.
 					</p>
 					<p>
 						Requirements according to{" "}
@@ -68,23 +70,22 @@ function App() {
 						</a>
 					</p>
 					<ul className="wcagRequirementsList">
-						<li>Level AA requires a ratio of 4.5:1 for normal text</li>
+						<li>Level AA - 4.5:1 for normal text</li>
 						<li>
-							Level AA requires a ratio of 3:1 for large text, graphics and user
-							interface components
+							Level AA - 3:1 for large text*, graphics and user interface
+							components
 						</li>
-						<li>Level AAA requires a ratio of 7:1 for normal text</li>
+						<li>Level AAA - 7:1 for normal text</li>
 						<li>
-							Level AAA requires a ratio of 4.5:1 for large text, graphics and
-							user interface components
+							Level AAA - 4.5:1 for large text*, graphics and user interface
+							components
 						</li>
 					</ul>
-					<p>
-						Large text is defined as 24px with normal font weight or 18.66px
-						with bold font weight.
+					<p className="small-ptext">
+						*Large text = 24px normal or 18.66px bold.
 					</p>
 				</section>
-				<section className="colorInputContainer">
+				<section className="sectionContainer">
 					{colors.map((obj, i) => (
 						<ColorInput
 							key={i}
@@ -108,7 +109,7 @@ function App() {
 					</button>
 				</div>
 				<section>
-					<ul className="contrastInfoCardsContainer">
+					<ul className="sectionContainer">
 						{colorCombinations.map((colorObj, index) => (
 							<ContrastInfoCard
 								key={`${index}`}
