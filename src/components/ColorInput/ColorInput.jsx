@@ -32,7 +32,7 @@ const ColorInput = ({
 				/>
 				{colorsLength > 2 ? (
 					<button
-						className="deleteButton"
+						className={styles.deleteButton}
 						aria-label={`delete input ${inputId}`}
 						onClick={() => handleDelete(inputId - 1)}>
 						<AiOutlineCloseCircle color="grey" />

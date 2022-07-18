@@ -2,14 +2,22 @@
 
 /*App*/
 .appContainer {
-	margin: 0;
 	display: flex;
 	flex-direction: column;
 	box-shadow: 2px 2px 10px var(--lightGrey), -2px -2px 10px var(--lightGrey);
 }
 
+.main {
+	padding: 16px;
+}
+
 .instructionsContainer {
 	margin: 2rem 0;
+	max-width: 90ch;
+}
+
+.small-ptext {
+	font-size: 0.75rem;
 }
 
 .instructionsContainer p,
@@ -21,11 +29,12 @@
 	margin-left: 20px;
 }
 
-.colorInputContainer {
+.sectionContainer {
 	display: flex;
 	gap: 0.5rem;
 	flex-wrap: wrap;
 }
+
 
 .addColorInputBtnContainer {
 	display: flex;
@@ -37,7 +46,7 @@
 	color: #ffffff;
 }
 .addColorInputBtnContainer .resetBtn {
-	background-color: var(--grey);
+	background-color: var(--lightGrey);
 	color: #000;
 	display: flex;
 	align-items: center;
@@ -45,26 +54,6 @@
 }
 .resetIcon {
 	stroke-width: 15px;
-}
-
-.contrastInfoCardsContainer {
-	display: flex;
-	gap: 0.5rem;
-	flex-wrap: wrap;
-}
-
-/* Delete button */
-.deleteButton {
-	position: absolute;
-	top: 0.95rem;
-	left: 158px;
-	background: white;
-	border-radius: var(--borderRadius);
-	height: 1rem;
-	padding: 0;
-	box-shadow: none;
-	display: flex;
-	align-items: center;
 }
 
 .sr-only {
