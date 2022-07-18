@@ -4,10 +4,10 @@ import { getRelativeLuminance, deepCopyArrayOfObject } from "./utils"
 import "./App.css"
 
 import { AiOutlineReload } from "react-icons/ai"
-import ColorInput from "./components/ColorInput"
-import ContrastInfoCard from "./components/ContrastInfoCard"
+import ColorInput from "./components/ColorInput/ColorInput"
+import ContrastInfoCard from "./components/ContrastInfoCard/ContrastInfoCard"
 import Header from "./components/Header/Header"
-import Footer from "./components/Footer"
+import Footer from "./components/Footer/Footer"
 
 const initialColorState = [
 	{ colorCodeHex: "#ffffff", relativeLuminance: 1 },

@@ -1,10 +1,12 @@
 import React from "react"
 import { AiOutlineGithub } from "react-icons/ai"
 
+import styles from "./Footer.module.css"
+
 const Footer = () => {
 	return (
-		<footer className="footer">
-			<div className="footer-div">
+		<footer className={styles.footer}>
+			<div className={styles.footerDiv}>
 				<a
 					href="https://github.com/AccessibleForAll/ColorPaletteCombos"
 					className="github-link">
@@ -12,7 +14,7 @@ const Footer = () => {
 				</a>
 				<AiOutlineGithub />
 			</div>
-			<div className="footer-div">
+			<div className={styles.footerDiv}>
 				<p>Having issues?</p>
 				<a
 					href="https://github.com/AccessibleForAll/ColorPaletteCombos/issues/new?assignees=&labels=&template=bug_report.md&title="
