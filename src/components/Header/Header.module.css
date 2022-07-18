@@ -1,0 +1,7 @@
+.header {
+  background: rgb(105,224,245);
+background: linear-gradient(275deg, rgba(105,224,245,1) 0%, rgba(245,232,113,1) 48%, rgba(245,100,159,1) 100%);
+  display: grid;
+  place-items: center;
+  height: 6rem;
+}
