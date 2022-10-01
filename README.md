@@ -16,3 +16,6 @@ A tool for creating an accessible color palette which corresponds to the [WCAG 2
 ## License
 
 Color Palette Combos is licensed under the MIT License - see [License](https://github.com/AccessibleForAll/ColorPaletteCombos/blob/main/LICENSE)
+
+## Open the tool in Gitpod
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/AccessibleForAll/ColorPaletteCombos)
